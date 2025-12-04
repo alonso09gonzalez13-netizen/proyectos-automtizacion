@@ -3,30 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manuales Técnicos</title>
+    <title>Documentación Técnica ET2</title>
     <style>
-        body { font-family: sans-serif; text-align: center; margin-top: 40px; background-color: #f4f4f9; }
+        /* Estilos generales para que se vea bien en celular */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* La tarjeta blanca del centro */
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            color: #7f8c8d;
+            margin-bottom: 2rem;
+        }
+
+        /* Estilo de los botones */
         .boton {
             display: block;
-            width: 80%;
-            max-width: 300px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #0056b3;
+            width: 100%;
+            padding: 15px 0;
+            margin: 15px 0;
             color: white;
             text-decoration: none;
-            border-radius: 10px;
-            font-size: 18px;
+            border-radius: 8px;
             font-weight: bold;
+            font-size: 1.1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-sizing: border-box; /* Para que el padding no deforme el ancho */
+        }
+
+        /* Colores específicos para diferenciar */
+        .btn-mecanico {
+            background-color: #007bff; /* Azul */
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+        }
+
+        .btn-electrico {
+            background-color: #dc3545; /* Rojo tipo advertencia/electricidad */
+            box-shadow: 0 4px 10px rgba(220, 53, 69, 0.3);
+        }
+
+        /* Efecto al presionar */
+        .boton:active {
+            transform: scale(0.98);
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: #bdc3c7;
         }
     </style>
 </head>
 <body>
-    <h1>Manuales de Mantenimiento</h1>
-    <p>Seleccione archivo:</p>
 
-    <a href="mecanico.pdf" class="boton">🔩 Manual Mecánico</a>
-    <a href="electrico.pdf" class="boton">⚡ Manual Eléctrico</a>
+    <div class="card">
+        <h1>Manuales Técnicos</h1>
+        <p>Seleccione el documento a consultar:</p>
+
+        <a href="mecanico.pdf" class="boton btn-mecanico">
+            ⚙️ Diagrama Mecánico
+        </a>
+
+        <a href="electrico.pdf" class="boton btn-electrico">
+            ⚡ Diagrama Eléctrico
+        </a>
+
+        <div class="footer">
+            Ingeniería & Automatización<br>
+            Rev. 2025
+        </div>
+    </div>
 
 </body>
 </html>
